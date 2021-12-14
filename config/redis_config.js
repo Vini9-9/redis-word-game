@@ -2,9 +2,9 @@ var config = {
   host: '127.0.0.1',
   port: 6379,
   options: {
-    //auth_pass: 'password' // enable as needed
+    auth_pass: 'senhajogo' // enable as needed
   },
-  db: 1 // selected Redis database
+	db: 0 // selected Redis database
 };
 
 module.exports = config;
