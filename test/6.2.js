@@ -13,7 +13,7 @@ describe('6.2', function() {
     redis.flushdb(done);
   });
 
-  describe('creating a game', function() {
+  describe('creating a game | Criando o jogo', function() {
 
     var gameId;
     var NUM_PLAYERS = 3;
@@ -37,7 +37,7 @@ describe('6.2', function() {
       });
     });
 
-    it('should generate unique ids', function(done) {
+    it('should generate unique ids | Deve gerar ids unicos', function(done) {
 
       helpers.createGame(NUM_PLAYERS, function(err, gameData) {
         should.not.exist(err);
@@ -46,7 +46,7 @@ describe('6.2', function() {
       });
     });
 
-    it('should assign players', function(done) {
+    it('should assign players | Deve atribuir jogadores', function(done) {
 
       game.getGame(gameId, function(err, gameData) {
         should.exist(gameData.playerIds);
@@ -56,7 +56,7 @@ describe('6.2', function() {
       });
     });
 
-    it('should assign a current player', function(done) {
+    it('should assign a current player | Deve atribuir o jogador atual', function(done) {
 
       game.getGame(gameId, function(err, gameData) {
         should.exist(gameData.currentPlayerIndex);
